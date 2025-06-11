@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Public0Static1Void/hueveras/issues"
   },
-  "homepage": "https://github.com/Public0Static1Void/hueveras#readme"
+  "homepage": "https://github.com/Public0Static1Void/hueveras#readme",
+  "dependencies": {
+    "phaser": "^3.90.0"
+  }
 }
