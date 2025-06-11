@@ -1,3 +1,5 @@
+import TitleScreen  from "./scenes/title_screen"
+
 const config = {
     width: 800,
     heigth: 500,
@@ -6,3 +8,6 @@ const config = {
 
 const game = new Phaser.Game(config)
 
+game.scene.add('title_screen', TitleScreen)
+
+game.scene.start('title_screen')
