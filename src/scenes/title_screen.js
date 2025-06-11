@@ -1,4 +1,4 @@
-export default class TitleScreen extends Phaser.Scenes
+export default class TitleScreen extends Phaser.Scene
 {
     preload(){
 
