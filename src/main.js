@@ -1,4 +1,4 @@
-import TitleScreen  from "./scenes/title_screen"
+import TitleScreen  from "./scenes/title_screen.js"
 
 const config = {
     width: 800,
