@@ -1,0 +1,22 @@
+{
+  "name": "hueveras",
+  "version": "1.0.0",
+  "description": "A phaser game",
+  "main": "index.js",
+  "scripts": {
+    "test": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Public0Static1Void/hueveras.git"
+  },
+  "keywords": [
+    "huev"
+  ],
+  "author": "Dani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Public0Static1Void/hueveras/issues"
+  },
+  "homepage": "https://github.com/Public0Static1Void/hueveras#readme"
+}
