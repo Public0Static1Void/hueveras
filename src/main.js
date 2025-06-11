@@ -1,5 +1,3 @@
-import Phaser from 'phaser'
-
 const config = {
     width: 800,
     heigth: 500,
