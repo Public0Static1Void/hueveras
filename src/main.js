@@ -1,4 +1,3 @@
-import Phaser from './node_modules/src/phaser.js'
 import TitleScreen  from "./scenes/title_screen.js"
 
 const config = {
