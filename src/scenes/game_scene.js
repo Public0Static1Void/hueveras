@@ -14,7 +14,7 @@ export default class GameScene extends Phaser.Scene
     }
     create(){
         // Música
-        this.music_bg_loop = this.add.audio("s_mainloop", { loop: true, volume: 0.45 })
+        this.music_bg_loop = this.sound.audio("s_mainloop", { loop: true, volume: 0.45 })
         this.music_bg_loop.play()
 
         // Textos
