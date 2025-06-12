@@ -10,7 +10,7 @@ export default class GameScene extends Phaser.Scene
         // Crea la instancia de la huevera
         this.huevera = this.add.rectangle(400, 400, 10, 5, 0xffffff, 1)
 
-        this.physics.add.existing(huevera, true) // Vuelve la huevera estática
+        this.physics.add.existing(this.huevera, true) // Vuelve la huevera estática
 
         this.spawnHuevo()
 
