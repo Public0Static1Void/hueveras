@@ -8,7 +8,7 @@ const config = {
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: {y: -1}
+            gravity: {y: 1.8}
         }
     }
 }
@@ -18,4 +18,4 @@ const game = new Phaser.Game(config)
 game.scene.add('title_screen', TitleScreen)
 game.scene.add('game_scene', GameScene)
 
-game.scene.start('title_screen')
+game.scene.start('game_scene')
