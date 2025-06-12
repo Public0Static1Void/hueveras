@@ -152,8 +152,8 @@ export default class GameScene extends Phaser.Scene
     }
     addTime(amount){
         this.seconds += amount
-        if (this.time < 0){
-            this.time = 0
+        if (this.seconds < 0){
+            this.seconds = 0
             this.endtext = "Game Over..."
             this.endGame()
         }
