@@ -1,5 +1,5 @@
 import TitleScreen  from "./scenes/title_screen.js"
-import GameScene  from "./scenes/game_screen.js"
+import GameScene  from "./scenes/game_scene.js"
 
 const config = {
     width: 800,
