@@ -14,7 +14,9 @@ export default class GameScene extends Phaser.Scene
         this.physics.add.existing(huevera, true) // Vuelve la huevera estática
 
         // Colisiones
-        this.physics.add.collider(huevo, hueveram, this.addHuevo)
+        this.physics.add.collider(huevo, huevera, () => {
+            this.addHuevo()
+        })
 
         this.huevos = 0
     }
