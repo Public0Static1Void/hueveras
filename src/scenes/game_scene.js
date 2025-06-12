@@ -40,7 +40,7 @@ export default class GameScene extends Phaser.Scene
 
         // Drag de los huevos -------------------------------------------------------------------------------------
         this.input.on('dragstart', (pointer, gameObject) => {
-            gameObject.setScale(1.2) // Hace más grande el gameObject
+            gameObject.setDisplaySize(60, 60) // Hace más grande el gameObject
         })
 
         // Deja el gameObject en su nueva posición
