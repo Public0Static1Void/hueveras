@@ -97,6 +97,7 @@ export default class GameScene extends Phaser.Scene
 
                 // Si se acaban los segundos finaliza el juego
                 if (this.seconds <= 0) {
+                    this.endtext = "Game Over..."
                     this.endGame()
                 }
             },
