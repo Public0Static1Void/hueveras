@@ -105,7 +105,7 @@ export default class GameScene extends Phaser.Scene
     }
     // Spawns -----------------------------------------------------------
     spawnHuevera(x, y, color){
-        const huevera = this.add.image(x, y, 'huevera')
+        const huevera = this.add.image(x, y, 'huevera').setDisplaySize(50, 50)
         huevera.setTint(color)
         huevera.setData('type', color)
 
@@ -123,7 +123,7 @@ export default class GameScene extends Phaser.Scene
         }
     }
     spawnHuevo(x, y, color){
-        const huevo = this.add.image(x, y, 'huevo_base').setInteractive()
+        const huevo = this.add.image(x, y, 'huevo').setInteractive()
         huevo.setTint(color)
         huevo.setData('type', color)
 
