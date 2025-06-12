@@ -59,6 +59,9 @@ export default class GameScene extends Phaser.Scene
                     if (huevo.getData('type') === huevera.getData('type')) {
                         this.addScore(10)
                         this.sound.play("s_acierto")
+
+                        huevo.destroy()
+
                         good = true
                     } else {
                         // Si no lo está resta score y tiempo
@@ -75,10 +78,9 @@ export default class GameScene extends Phaser.Scene
                 this.sound.play("s_fallo")
             }
 
-            huevo.destroy()
 
             if (this.huevos.getChildren().length === 1) {
-                this.finJuego()
+                this.endGame()
             }
         })
 
@@ -116,6 +118,7 @@ export default class GameScene extends Phaser.Scene
             color1, color2, color3
         }
         for (let i = 0; i < 15; i++){
+            console.log("Color: " + color[i])
             const rand_x = Phaser.Math.Between(200, 750)
             const rand_y = Phaser.Math.Between(200, 300)
             const col = colors[Phaser.Math.Between(0, 2)]
