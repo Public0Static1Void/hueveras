@@ -114,11 +114,11 @@ export default class GameScene extends Phaser.Scene
         return huevera
     }
     spawnMultipleHuevos(color1, color2, color3){
-        const colors = {
+        const colors = [
             color1, color2, color3
-        }
+        ]
         for (let i = 0; i < 15; i++){
-            console.log("Color: " + color[i])
+            console.log("Color: " + colors[i])
             const rand_x = Phaser.Math.Between(200, 750)
             const rand_y = Phaser.Math.Between(200, 300)
             const col = colors[Phaser.Math.Between(0, 2)]
