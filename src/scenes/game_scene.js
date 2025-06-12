@@ -12,6 +12,8 @@ export default class GameScene extends Phaser.Scene
 
         this.physics.add.existing(this.huevera, true) // Vuelve la huevera estática
 
+        this.huevosGroup = this.physics.add.group()
+
         this.spawnHuevo()
 
         this.huevos = 0
@@ -20,12 +22,23 @@ export default class GameScene extends Phaser.Scene
         this.keys = this.input.keyboard.createCursorKeys()
     }
 
+    update(){
+        const huevoChildren = this.huevosGroup.getChildren()
+        for (let i = 0; i < huevoChildren.length; i++){
+            if (huevoChildren[i].y > this.sys.game.config.height + 50){
+                huevoChildren[i].destroy()
+            }
+        }
+    }
+
     spawnHuevo(){
         const rand_x = Phaser.Math.Between(0, 800)
         
         const huevo = this.add.circle(rand_x, 0, 10, 0xffffff, 1)
         this.physics.add.existing(huevo)
-        huevo.body.setVelocityY(300)
+        huevo.body.setVelocityY(150)
+
+        this.huevosGroup.add(huevo)
 
         // Colisiones
         this.physics.add.collider(huevo, this.huevera, () => {
@@ -39,4 +52,5 @@ export default class GameScene extends Phaser.Scene
 
         huevo.destroy()
     }
+    
 }
