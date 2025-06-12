@@ -25,6 +25,7 @@ export default class GameScene extends Phaser.Scene
         
         const huevo = this.add.circle(rand_x, 0, 10, 0xffffff, 1)
         this.physics.add.existing(huevo)
+        huevo.body.setVelocityY(300)
 
         // Colisiones
         this.physics.add.collider(huevo, this.huevera, () => {
