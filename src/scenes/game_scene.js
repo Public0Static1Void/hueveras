@@ -123,7 +123,7 @@ export default class GameScene extends Phaser.Scene
         }
     }
     spawnHuevo(x, y, color){
-        const huevo = this.add.image(x, y, 'huevo').setInteractive()
+        const huevo = this.add.image(x, y, 'huevo').setInteractive().setDisplaySize(10, 10)
         huevo.setTint(color)
         huevo.setData('type', color)
 
