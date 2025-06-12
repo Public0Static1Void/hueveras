@@ -58,6 +58,7 @@ export default class GameScene extends Phaser.Scene
                     // Comprueba que la huevera y el huevo sean del mismo color
                     if (huevo.getData('type') === huevera.getData('type')) {
                         this.addScore(10)
+                        this.addTime(5)
                         this.sound.play("s_acierto")
 
                         huevo.destroy()
