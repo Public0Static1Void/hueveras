@@ -120,7 +120,7 @@ export default class GameScene extends Phaser.Scene
         for (let i = 0; i < 15; i++){
             console.log("Color: " + colors[i])
             const rand_x = Phaser.Math.Between(200, 750)
-            const rand_y = Phaser.Math.Between(200, 300)
+            const rand_y = Phaser.Math.Between(200, 500)
             const col = colors[Phaser.Math.Between(0, 2)]
             this.spawnHuevo(rand_x, rand_y, col)
         }
