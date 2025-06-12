@@ -24,8 +24,8 @@ export default class GameScene extends Phaser.Scene
         this.txt_time = this.add.text(10, 40, 'Tiempo: 60', { fontSize: '20px', color: '#fff' })
 
         // Fondo
-        this.add.image(800, 500, "background").setDepth(-2).setDisplaySize(800, 500)
-        this.add.image(0, 250, "bg_paja").setDepth(-1).setDisplaySize(200, 500)
+        this.add.image(0, 0, "background").setDepth(-2).setDisplaySize(800, 500)
+        this.add.image(0, 0, "bg_paja").setDepth(-1).setDisplaySize(200, 500)
         
         // Hueveras
         this.hueveras = []
@@ -79,7 +79,7 @@ export default class GameScene extends Phaser.Scene
             }
 
 
-            if (this.huevos.getChildren().length === 1) {
+            if (this.huevos.getChildren().length === 0) {
                 this.endGame()
             }
         })
