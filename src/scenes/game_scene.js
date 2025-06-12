@@ -81,6 +81,7 @@ export default class GameScene extends Phaser.Scene
 
 
             if (this.huevos.getChildren().length === 0) {
+                this.endtext = "You win!"
                 this.endGame()
             }
         })
@@ -157,12 +158,8 @@ export default class GameScene extends Phaser.Scene
         this.playing = false
         this.music_bg_loop.stop()
 
-        this.add.rectangle(400, 250, 800, 500, 0x000000, 0.75).setDepth(10)
+        this.add.rectangle(400, 250, 800, 1000, 0x000000, 0.75).setDepth(10)
         this.add.text(300, 200, this.endtext, { fontSize: "40px", color: "#fff" }).setDepth(11)
         this.add.text(280, 260, `Puntos: ${this.score}`, { fontSize: "32px", color: "#f0e68c" }).setDepth(11)
     }
-
-    update(){
-
-    } 
 }
