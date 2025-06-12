@@ -125,7 +125,6 @@ export default class GameScene extends Phaser.Scene
     spawnHuevo(x, y, color){
         const huevo = this.add.image(x, y, 'huevo').setInteractive().setDisplaySize(50, 50)
         huevo.setTint(color)
-        huevo.setBlendMode(Phaser.BlendModes.MULTIPLY)
         huevo.setData('type', color)
 
         this.input.setDraggable(huevo)
